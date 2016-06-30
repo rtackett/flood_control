@@ -11,7 +11,7 @@ use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
-use Drupal\Core\Datetime\Entity\DateFormat; 
+use Drupal\Core\Datetime\Entity\DateFormat;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -184,7 +184,7 @@ class AdminForm extends ConfigFormBase {
 	protected function getDateFormatedList($showSelect = FALSE) {
 
 		$date_formatter = \Drupal::service('date.formatter');
-		$timestamps = array(60, 180, 300, 600, 900, 1800, 2700, 3600, 10800, 21600, 32400, 43200, 86400);
+		$timestamps = array(60, 180, 300, 600, 900, 1200, 1800, 2700, 3600, 10800, 21600, 32400, 43200, 86400);
 		$list = array();
 
 		// Add the "None (disabled)" as first entry.
